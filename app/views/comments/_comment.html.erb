@@ -1,0 +1,5 @@
+<h5><%= gravatar_for comment.user, size: 25 %><%= comment.user.name %></h5><p><%= comment.content %></p>
+<span class="timestamp">
+  Posted <%= time_ago_in_words(comment.created_at) %> ago.
+  <%= link_to "delete", micropost_comment_path(comment.micropost, comment), method: :delete, data: {confirm: "You sure delete?"} %>
+</span>

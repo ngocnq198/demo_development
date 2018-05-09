@@ -1,0 +1,263 @@
+@import 'bootstrap-sprockets';
+@import 'bootstrap';
+@import 'variables';
+
+body {
+	padding-top: 60px;
+}
+
+.cover_home {
+	background-color: $olive;
+	color: $white;
+	padding: 100px 0;
+	h1 {
+		margin: 0;
+	}
+}
+
+h1 {
+	font-size: 24px;
+}
+
+.sign_up, .login {
+	h1 {
+		color: $blue;
+	}
+	form {
+		input {
+			border-radius: 0px;
+		}
+		label {
+			margin: 10px 0;
+			text-align: left;
+			width: 100%;
+		}
+		input[type="submit"] {
+			margin-top: 20px;
+			width: 100%;
+			&:hover {
+				background-color: $green;
+			}
+		}
+		label {
+			&.checkbox {
+				&>span {
+					margin-left: 20px;
+				}
+			}
+		}
+	}
+}
+
+.login {
+	form {
+		input[type="checkbox"] {
+			margin-left: 0;
+		}
+		span {
+			&.translation_missing {
+				margin-left: 20px;
+			}
+		}
+		input[type="submit"] {
+			&.btn {
+				margin-top: 0;
+			}
+		}
+	}
+	.link_create_account {
+		margin-top: 10px;
+		color: $green;
+		a {
+			text-decoration: underline;
+		}
+	}
+}
+
+#error_explanation ul {
+	color: $red;
+	list-style-type: none;
+	padding-left: 0px;
+	text-align: left;
+}
+
+footer {
+  border-top: 1px solid $gray-medium-light;
+  color: $gray-light;
+  margin-top: 45px;
+  padding-top: 5px;
+  a {
+    color: $gray;
+    &:hover {
+      color: $gray-darker;
+    }
+  }
+  small {
+    float: left;
+  }
+  ul {
+    float: right;
+    list-style: none;
+    li {
+      float: left;
+      margin-left: 15px;
+    }
+  }
+}
+
+.microposts {
+  list-style: none;
+  padding: 0;
+  li {
+    border-top: 1px solid #e8e8e8;
+    padding: 10px 0;
+  }
+  .user {
+    margin-top: 5em;
+    padding-top: 0;
+  }
+  .content {
+    display: block;
+    margin-left: 60px;
+    img {
+      display: block;
+      padding: 5px 0;
+    }
+  }
+  .timestamp {
+    color: $gray-light;
+    display: block;
+    margin-left: 60px;
+  }
+  .gravatar {
+    float: left;
+    margin-right: 10px;
+    margin-top: 5px;
+  }
+}
+
+aside {
+  textarea {
+    height: 100px;
+    margin-bottom: 5px;
+  }
+}
+
+span.picture {
+  margin-top: 10px;
+  input {
+    border: 0;
+  }
+}
+
+.new_micropost {
+	margin-top: 10px;
+	#micropost_content {
+		height: 150px;
+		width: 100%;
+	}
+	input[type="submit"] {
+		border-radius: 0px;
+		margin-bottom: 10px;
+		margin-top: 10px;
+		width: 100%;
+	}
+	label {
+		display: block;
+		margin-top: 5px;
+	}
+	input {
+		width: 100%;
+	}
+}
+
+.btn_view_all {
+	margin-top: 30px;
+	width: 100%;
+}
+
+.stats {
+  margin-top: 0;
+  overflow: auto;
+  padding: 0;
+  a {
+    border-left: 1px solid $gray-lighter;
+    color: $green;
+    float: left;
+    padding: 0 10px;
+    &:first-child {
+      border: 0;
+      padding-left: 0;
+    }
+    &:hover {
+      color: $blue;
+      text-decoration: none;
+    }
+  }
+  strong {
+    display: block;
+  }
+}
+
+.user_avatars {
+  margin-top: 10px;
+  overflow: auto;
+  .gravatar {
+    margin: 1px 1px;
+  }
+  a {
+    padding: 0;
+  }
+}
+
+.users.follow {
+  padding: 0;
+}
+
+.users {
+  list-style: none;
+  margin: 0;
+  li {
+    border-bottom: 1px solid $gray-lighter;
+    overflow: auto;
+    padding: 10px 0;
+  }
+}
+
+.text_area_comment {
+	height: 120px;
+  width: 50%;
+}
+
+.btn_comment {
+	background-color: $green;
+	color: $white;
+	margin-top: 10px;
+	width: 50%;
+}
+
+#comments {
+	display: none;
+	margin: 5px 0 10px;
+	&>h4 {
+		margin-bottom: 0px;
+	}
+	&>p,&>span {
+		margin-bottom: 0px;
+		margin-left: 20px;
+	}
+	&>ol {
+		padding-left: 60px;
+	}
+	.gravatar {
+		margin-top: 0px;
+	}
+}
+
+.btn_show_comment {
+	margin: 15px 0;
+  background-color: $olive;
+  border-radius: 0px;
+  border: 1px solid $green;
+}
+

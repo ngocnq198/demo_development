@@ -1,0 +1,25 @@
+<% provide :title, t("home") %>
+<% if logged_in? %>
+  <div class="row">
+    <aside class="col-md-6">
+      <section class="user_info">
+        <%= render "shared/user_info" %>
+      </section>
+      <section class="micropost_form">
+        <%= render "shared/micropost_form" %>
+      </section>
+    </aside>
+    <div class="col-md-6">
+      <%= link_to t(".view_all"), current_user, class: "btn btn-primary btn_view_all" %>
+      <!-- <h3><%= t ".list_post" %></h3>
+      <%= render "shared/feed" %> -->
+    </div>
+  </div>
+<% else %>
+  <div class="cover_home text-center">
+    <h1>
+      <%= t".please_sign" %>
+      <%= link_to t("sign_up"), new_user_path, class: "btn btn-primary" %>
+    </h1>
+  </div>
+<% end %>

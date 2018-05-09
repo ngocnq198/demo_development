@@ -1,33 +1,46 @@
-# Files in the config/locales directory are used for internationalization
-# and are automatically loaded by Rails. If you want to use locales other
-# than English, add the necessary files in this directory.
-#
-# To use the locales, use `I18n.t`:
-#
-#     I18n.t 'hello'
-#
-# In views, this is aliased to just `t`:
-#
-#     <%= t('hello') %>
-#
-# To use a different locale, set it with `I18n.locale`:
-#
-#     I18n.locale = :es
-#
-# This would use the information in config/locales/es.yml.
-#
-# The following keys must be escaped otherwise they will not be retrieved by
-# the default I18n backend:
-#
-# true, false, on, off, yes, no
-#
-# Instead, surround them with single quotes.
-#
-# en:
-#   'true': 'foo'
-#
-# To learn more, please read the Rails Internationalization guide
-# available at http://guides.rubyonrails.org/i18n.html.
-
 en:
-  hello: "Hello world"
+  post: "Posted"
+  ago: "ago."
+  delete: "delete"
+  you_sure: "You sure?"
+  micropost_destroy: "delete micropost success"
+  sign_up: "Sign up"
+  add_post: "Addition Post"
+  please_login: "Please Login Before Visit Page"
+  follow: "Follow"
+  unfollow: "unfollow"
+  comment: "Comment"
+  layouts:
+    header:
+      sample: "sample app"
+      log: "Log in"
+      user: "Users"
+      account: "Account"
+      profile: "Profile"
+      setting: "Settings"
+      log-out: "Log out"
+  static_pages:
+    home:
+      please_sign: "Please Sign up To Visit our Page"
+      view_all: "View all Post"
+  users:
+    sign_success: "Sign Up Success"
+    show:
+      list_post: "List Posts"
+    show_follow:
+      view_follow: "view my profile"
+  sessions:
+    new:
+      login: "Login"
+      remember: "Remember"
+      create_account: "Click to Create Account > "
+      sign_account: "signup account"
+    create: 
+      login_fail: "Email or Password is invalid"
+  shared:
+    compose_new: "Compose new micropost..."
+    post: "Post"
+    view_profile: "view my profile"
+    micropost: "micropost"
+    comment_new: "New comment ..."
+    add_comment: "Add Comment"
