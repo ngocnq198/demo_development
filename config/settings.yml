@@ -1,0 +1,15 @@
+users:
+  name:
+    max_length: 50
+  email:
+    max_length: 255
+  password:
+    min_length: 6
+  gravatar:
+    size_80: 80
+microposts:
+  content:
+    max_length: 140
+    min_length: 6
+  gravatar:
+    size: 50

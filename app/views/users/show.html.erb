@@ -1,0 +1,43 @@
+<% provide(:title, @user.name) %>
+<div class="row">
+  <aside class="col-md-4">
+    <section class="user_info">
+      <h1>
+        <%= gravatar_for @user %>
+        <%= @user.name %>
+      </h1>
+    </section>
+    <section class="stats">
+      <%= render "shared/stats" %>
+    </section>
+    <%= link_to t("add_post"), root_path, class: "btn btn-primary btn_view_all" %>
+  </aside>
+  <div class="col-md-8">
+    <%= render "follow_form" if logged_in? %>
+    <% if @user.microposts.any? %>
+      <h3><%= t ".list_post" %> (<%= @user.microposts.count %>)</h3>
+      <ol class="microposts">
+        <%= render @microposts %>
+      </ol>
+      <%= will_paginate @microposts %>
+    <% end %>
+  </div>
+</div>
+<script type="text/javascript">
+  $(document).ready(function(){
+    $(".btn_show_comment").on("click", function(){
+      if($(this).next("#comments").is(":hidden")){
+        $(this).next("#comments").show();
+      } else {
+        $(this).next("#comments").hide();
+      }
+    });
+    // $(".btn_show_comment").on("click", function(){
+    //   if($(this).next("#comments").css("display") == "none"){
+    //     $(this).next("#comments").css("display", "block");
+    //   } else {
+    //     $(this).next("#comments").css("display", "none");
+    //   }
+    // });
+  });
+</script>
